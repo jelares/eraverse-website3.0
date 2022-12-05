@@ -24,7 +24,7 @@ body
     right: 50%;
     margin-top: 10px;
     text-align: center;
-    width:240px;
+    width:200px;
 }
 
 .content-right {
@@ -32,15 +32,15 @@ body
     left: 50%;
     margin-top: 10px;
     text-align: center;
-    width:240px;
+    width:200px;
 }
 
 .content {
   position: absolute;
   margin-top: 240px;
   left:50%;
-  margin-left: -240px;
-  width:480px;
+  margin-left: -200px;
+  width:400px;
 }
 
 .content p {
@@ -61,7 +61,7 @@ h1 {
 h2 {
     color: #FBF5E5;
     font-family: 'Jost', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* CSS */
@@ -82,7 +82,7 @@ h2 {
   margin: 8px 0 0;
   outline: none;
   overflow: hidden;
-  padding: 0 25px;
+  padding: 0 10px;
   position: relative;
   text-align: center;
   text-transform: none;
@@ -91,7 +91,7 @@ h2 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 65%;
+  width: 85%;
 }
 
 .button-9:disabled {
