@@ -24,17 +24,22 @@ body
     outline: none;
 }
 
-.bottom-button {
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 100%;
+    }
+}
+
+.container {
     position: absolute;
     left:0;
     right:0;
-    bottom: 0;
+    top: 0;
 
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-    width:200px;
-    font-family: twboz;
+
+    height: 90vh;
 }
 
 .content {
@@ -46,11 +51,10 @@ body
     left: 0;
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 5vh;
-    width: 80vw;
-    max-width: 1000px;
-    min-width: 500px;
-    height: 80vh;
+    width: 1024px;
+    height: 85vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh; 
     border-radius: 25px;
 
     background-color: white;
@@ -75,7 +79,19 @@ body
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* CSS */
+.bottom-button {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    height: 10vh;
+    font-family: twboz;
+}
+
 .button-9 {
     display: none;
     opacity: .098;
@@ -90,9 +106,11 @@ body
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 100%;
-    height: 44px;
+    height: 5vh;
     line-height: 1.15;
-    margin: 8px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
     outline: none;
     overflow: hidden;
     padding: 0 10px;
