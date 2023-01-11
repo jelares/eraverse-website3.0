@@ -40,6 +40,8 @@ body
     margin-right: auto;
 
     height: 90vh;
+    
+    display: none;
 }
 
 .content {
@@ -90,6 +92,8 @@ body
     width:200px;
     height: 10vh;
     font-family: twboz;
+
+    display: none;
 }
 
 .button-9 {
