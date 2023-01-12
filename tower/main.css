@@ -1,3 +1,8 @@
+:root {
+    --gradColor1: #21201c; /*rgb(0, 13, 133);*/
+    --gradColor2: #57ddff; /*rgb(255, 102, 0);*/
+}
+
 *
 {
     margin: 0;
@@ -24,7 +29,7 @@ body
     outline: none;
 }
 
- /* if not mobile */
+ /* if larger than tablet size */
 @media (min-width: 1024px) {
     .content {
         width: 1024px !important;
@@ -60,6 +65,7 @@ body
     margin-right: auto;
     width: 100%;
     height: 90%;
+    overflow: auto;
 
     background-color: white;
 
@@ -68,11 +74,31 @@ body
     font-family: 'Inter', sans-serif;
 }
 
+.title {
+    background-image: linear-gradient(to right, var(--gradColor2), var(--gradColor1), var(--gradColor2));
+    color: white;
+}
+
+.content h1 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.content h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.content h3 {
+    padding-bottom: 10px;
+}
+
 .card {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
+    padding: 16px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
     width: 60%;
@@ -81,6 +107,24 @@ body
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 300px;
+    min-width: 100px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+}
+
+.center:hover {
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
 }
 
 .bottom-button {
