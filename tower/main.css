@@ -3,6 +3,11 @@
     --gradColor2: #57ddff; /*rgb(255, 102, 0);*/
 }
 
+@font-face {
+    font-family: twboz;
+    src: url(assets/fonts/90428ecc4e4a07a7.ttf);
+}
+
 *
 {
     margin: 0;
@@ -16,11 +21,6 @@ body
     overscroll-behavior-x: none;
 }
 
-@font-face {
-    font-family: twboz;
-    src: url(assets/fonts/90428ecc4e4a07a7.ttf);
-}
-
 .webgl
 {
     position: fixed;
@@ -29,11 +29,43 @@ body
     outline: none;
 }
 
+.loading-bar
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0.3);
+    transform-origin: top left;
+    transition: transform 0.5s;
+}
+
+.loading-bar.ended
+{
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform 1.5s ease-in-out;
+}
+
  /* if larger than tablet size */
 @media (min-width: 1024px) {
     .content {
         width: 1024px !important;
         border-radius: 25px !important;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .row img { 
+        width: 30%;
+    }
+
+    .row .card {
+        margin-left: 0;
+        /* text-align: left; */
     }
 }
 
@@ -46,7 +78,7 @@ body
     margin-left: auto;
     margin-right: auto;
 
-    height: 90%;
+    height: 95%;
 
     display: none;
 }
@@ -58,13 +90,13 @@ body
     position: absolute;
     right: 0;
     left: 0;
-    top: 50%;
+    top: 51.125%;
     transform: translateY(-50%);
     
     margin-left: auto; 
     margin-right: auto;
     width: 100%;
-    height: 90%;
+    height: 96.125%;
     overflow: auto;
 
     background-color: white;
@@ -109,6 +141,29 @@ body
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card h1 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    padding: 0;
+}
+
+.card .heading {
+    margin-bottom: 15px;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -127,6 +182,34 @@ body
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
 }
 
+.row {
+    width: 100%;
+}
+
+.row .card {
+    text-align: left;
+}
+
+.row img {
+    width: 60%;
+    max-height: 300px;
+    min-height: 100px;
+    max-width: 300px;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+}
+
+.row img:hover {
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+}
+
 .bottom-button {
     position: absolute;
     left:0;
@@ -136,7 +219,7 @@ body
     margin-left: auto;
     margin-right: auto;
     width:200px;
-    height: 10%;
+    height: 5%;
     font-family: twboz;
 
     display: none;
@@ -156,7 +239,7 @@ body
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 100%;
-    height: 50%;
+    height: 75%;
     line-height: 1.15;
     margin-left: auto;
     margin-right: auto;
@@ -171,7 +254,7 @@ body
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 85%;
+    width: 100%;
   }
 
 .button-9:disabled {
