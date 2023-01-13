@@ -81,6 +81,7 @@ body
 
     display: none;
     opacity: .098;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -225,6 +226,7 @@ body
 
     display: none;
     opacity: .098;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
